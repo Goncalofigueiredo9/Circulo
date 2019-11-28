@@ -17,9 +17,15 @@ namespace Circulo
             InitializeComponent();
         }
 
-        private void Button1_Click(object sender, EventArgs e)
-        {
-
-        }
+        circulo calc = new circulo();
+           
+            private void Button1_Click(object sender, EventArgs e)
+            {
+                calc.Raio = textBox1.Text;
+                if (radioButton1.Checked) label4.Text = calc.Area;
+                else if (radioButton2.Checked) label4.Text = calc.Perimetro;
+                else if (radioButton3.Checked) label4.Text = calc.Diametro;
+            }
+        
     }
 }
